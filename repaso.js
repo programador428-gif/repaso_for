@@ -4,29 +4,48 @@ function mostrar(opcion) {
       ejercicio1();
       break;
     case 2:
-      ejercicio2();
+      imprimirCentenas();
       break;
     case 3:
-      ejercicio3();
+      imprimircentenasRegresivo();
       break;
-      defaul:
+    case 4:
+      mostrarMensaje1("Aprendiendo ciclos for");
+      break;
+    case 5:
+      mostrarMensaje2("JavaScript es potente");
+      break;
+    case 6:
+      mostrarMensaje3("Iteración completada");
+      break;
+    case 7:
+      mostrarMensaje4("Ciclo descendente");
+      break;
+    case 8:
+      imprimirTabla3(10);
+      break;
+    default:
+      console.log("Opción no válida");
       break;
   }
 }
 
 function ejercicio1() {
-  for (let i = 1; i <= 5; i++)
+  for (let i = 1; i <= 5; i++) {
     console.log(i);
+  }
 }
 
-function ejercicio2() {
-  for (let i = 100; i <= 1000; i += 100)
+function imprimirCentenas() {
+  for (let i = 100; i <= 1000; i += 100) {
     console.log(i);
+  }
 }
 
-function ejercicio3() {
-  for (let i = 1000; i >= 800; i -= 100)
+function imprimircentenasRegresivo() {
+  for (let i = 1000; i >= 800; i -= 100) {
     console.log(i);
+  }
 }
 
 function mostrarMensaje1(mensaje) {
@@ -55,17 +74,12 @@ function mostrarMensaje4(mensaje) {
 
 function imprimirTabla3(cantidad) {
   if (!cantidad || cantidad < 0 || cantidad > 100) {
-    console.log("error, cantidad no validad.");
-    return
+    console.log("error, cantidad no válida.");
+    return;
   }
-  let vuelta = 0;
-  let resultado = 0;
 
   for (let i = 1; i <= cantidad; i++) {
-    vuelta++;
-    resultado = 3 * i;
-    console.log(`3 x ${vuelta} = ${resultado}`);
+    let resultado = 3 * i;
+    console.log(`3 x ${i} = ${resultado}`);
   }
 }
-
-imprimirTabla3(10);
